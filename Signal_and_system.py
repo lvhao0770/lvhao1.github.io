@@ -1,5 +1,6 @@
 import tkinter as tk
 import pyglet
+
 window = tk.Tk()
 
 window.title('卷积实现过程')
