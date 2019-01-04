@@ -5,6 +5,37 @@ window = tk.Tk()
 window.title('卷积实现过程')
 window.geometry('900x600')
 
+
+def lianxugifOK():  # gif动画
+    ag_file = "a.gif"
+    animation = pyglet.resource.animation(ag_file)
+    sprite = pyglet.sprite.Sprite(animation)
+    win = pyglet.window.Window(width=sprite.width, height=sprite.height)
+    green = 0, 1, 0, 1
+    pyglet.gl.glClearColor(*green)
+
+    @win.event
+    def on_draw():
+        win.clear()
+        sprite.draw()
+    pyglet.app.run()
+
+
+def lisangifOK():  # gif动画
+    ag_file = "a.gif"
+    animation = pyglet.resource.animation(ag_file)
+    sprite = pyglet.sprite.Sprite(animation)
+    win = pyglet.window.Window(width=sprite.width, height=sprite.height)
+    green = 0, 1, 0, 1
+    pyglet.gl.glClearColor(*green)
+
+    @win.event
+    def on_draw():
+        win.clear()
+        sprite.draw()
+    pyglet.app.run()
+
+    
 a = 0
 
 
@@ -13,12 +44,14 @@ def lianxu_aniu():
     if a == 2:
         exec(open("hello.py").read())
         a = a + 1
+        
     if a == 1:
         exec(open("hello.py").read())
         a = a + 1
     if a == 0:
         exec(open("hello.py").read())
         a = a + 1
+        lianxugifOK()
 
 
 def lisan_aniu():
