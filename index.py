@@ -1,5 +1,5 @@
 import tkinter as tk
-
+import pyglet
 window = tk.Tk()
 
 window.title('卷积实现过程')
@@ -67,6 +67,7 @@ def lisan_aniu():
     if a == 3:
         exec(open("hello.py").read())
         a = 4
+        lisangifOK()
 
 
 lianxu = tk.Button(window, text='连续信号', width=10,
